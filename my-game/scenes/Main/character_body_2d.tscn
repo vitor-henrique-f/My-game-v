@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cypm1hpocatbd"]
+[gd_scene load_steps=29 format=3 uid="uid://cypm1hpocatbd"]
 
 [ext_resource type="Texture2D" uid="uid://ds0oa2w1cb3si" path="res://assets/sprites/warrior03.png" id="2_kcbbg"]
 
@@ -17,6 +17,38 @@ region = Rect2(32, 120, 16, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk6m0"]
 atlas = ExtResource("2_kcbbg")
 region = Rect2(48, 120, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c08l7"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(0, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrabt"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(16, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h618u"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(32, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kupdv"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(48, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e60t0"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(64, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyjqj"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(80, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfrtw"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(96, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pdqy"]
+atlas = ExtResource("2_kcbbg")
+region = Rect2(112, 72, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4lmgn"]
 atlas = ExtResource("2_kcbbg")
@@ -91,6 +123,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_c08l7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrabt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h618u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kupdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e60t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyjqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfrtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pdqy")
+}],
+"loop": false,
+"name": &"roll",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_4lmgn")
 }, {
 "duration": 1.0,
@@ -147,13 +208,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkgws"]
 size = Vector2(14, 16)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Character" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(295, 88)
 sprite_frames = SubResource("SpriteFrames_4lmgn")
-animation = &"death"
-frame_progress = 0.761996
+animation = &"roll"
+frame = 7
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
